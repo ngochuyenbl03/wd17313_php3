@@ -23,7 +23,14 @@ class StudentController extends Controller
             ->orWhere('email','=','ladarius50@example.net')
             ->get();
         $countST = DB::table('students')->count();
-        dd($studentCondition);
+        //dd($studentCondition);
         return view('student.index',compact('title','name','students'));
+    }
+    public function add(Request $request){
+        if ($request->isMethod('POST')){ // tồn tại phương thức post
+            dd($request->all());
+            //dd($request->name);
+        }
+        return view('student.add');
     }
 }

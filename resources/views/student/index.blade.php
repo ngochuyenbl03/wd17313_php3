@@ -8,8 +8,10 @@
     <title>{{$title}}</title>
 </head>
 <body>
+@extends('templates.layout')
+@section('content')
 <h1>{{$name}}</h1>
-<table border="1">
+<table class="table" border="1">
     <tr>
         <td>ID</td>
         <td>Name</td>
@@ -23,5 +25,4 @@
         </tr>
     @endforeach
 </table>
-</body>
-</html>
+@endsection
